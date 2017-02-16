@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0"
+	xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="io.github.talaatharb.fxplotter.plotter2d.Plotter2DController">
+	<children>
+		<HBox layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="800.0"
+			AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+			AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<children>
+				<VBox id="tools" prefHeight="200.0" prefWidth="200.0" spacing="10.0">
+					<children>
+						<AnchorPane>
+							<children>
+								<Label alignment="CENTER" contentDisplay="CENTER" text="f(x)"
+									AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0"
+									AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+							</children>
+						</AnchorPane>
+						<AnchorPane>
+							<children>
+								<TextField fx:id="functionText" alignment="CENTER"
+									editable="false" onAction="#functionChanged" text="sin(a*x) / x"
+									AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0"
+									AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+							</children>
+						</AnchorPane>
+						<AnchorPane>
+							<children>
+								<Slider fx:id="aSlider" blockIncrement="0.1" layoutX="3.0"
+									layoutY="1.0" max="10.0" min="-10.0" value="1.0"
+									AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0"
+									AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+							</children>
+						</AnchorPane>
+						<AnchorPane>
+							<children>
+								<Label fx:id="aLabel" alignment="CENTER" contentDisplay="CENTER"
+									text="a = 1" AnchorPane.bottomAnchor="5.0"
+									AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0"
+									AnchorPane.topAnchor="5.0" />
+							</children>
+						</AnchorPane>
+						<VBox>
+							<children>
+								<AnchorPane>
+									<children>
+										<Label alignment="CENTER" contentDisplay="CENTER" text="Resolution"
+											AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0"
+											AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+									</children>
+								</AnchorPane>
+								<AnchorPane>
+									<children>
+										<TextField fx:id="resolutionText" alignment="CENTER"
+											onAction="#resolutionChanged" text="32"
+											AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0"
+											AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+									</children>
+								</AnchorPane>
+							</children>
+						</VBox>
+						<AnchorPane>
+							<children>
+								<CheckBox fx:id="symbolsCheckBox" alignment="CENTER"
+									contentDisplay="CENTER" mnemonicParsing="false" onAction="#symbolsChanged"
+									selected="true" text="Symbols" textAlignment="CENTER"
+									AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0"
+									AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+							</children>
+						</AnchorPane>
+					</children>
+				</VBox>
+				<AnchorPane HBox.hgrow="ALWAYS">
+					<children>
+						<LineChart fx:id="lineChart" animated="false"
+							axisSortingPolicy="NONE" legendVisible="false" prefHeight="600.0"
+							prefWidth="600.0" title="2D Plot" AnchorPane.bottomAnchor="5.0"
+							AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0"
+							AnchorPane.topAnchor="5.0">
+							<xAxis >
+								<NumberAxis Label="x"/>
+							</xAxis>
+							<yAxis>
+								<NumberAxis Label="f(x)" AutoRanging="True"/>
+							</yAxis>
+						</LineChart>
+					</children>
+				</AnchorPane>
+			</children>
+		</HBox>
+	</children>
+</AnchorPane>
