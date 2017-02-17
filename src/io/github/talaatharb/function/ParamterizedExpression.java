@@ -3,6 +3,9 @@ package io.github.talaatharb.function;
 import java.util.HashMap;
 
 public interface ParamterizedExpression {
+	
+	public final static String PARAMETER1_NAME = "a";
+	
 	/**
 	 * Gets the mathematical expression of the function
 	 * 

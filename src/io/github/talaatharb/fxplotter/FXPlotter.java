@@ -10,6 +10,7 @@ public class FXPlotter extends Application {
 	private static final String CSS_FILE = "/io/github/talaatharb/fxplotter/theme.css";
 	private static final int HEIGHT = 600;
 	private static final String MAIN_FXML = "/io/github/talaatharb/fxplotter/FXPlotterView.fxml";
+	private static final String TITILE = "FX Plotter";
 	private static final int WIDTH = 800;
 
 	public static void main(String[] args) {
@@ -23,6 +24,7 @@ public class FXPlotter extends Application {
 			Scene scene = new Scene(root, WIDTH, HEIGHT);
 			scene.getStylesheets().add(getClass().getResource(CSS_FILE).toExternalForm());
 			primaryStage.setScene(scene);
+			primaryStage.setTitle(TITILE);
 			primaryStage.show();
 		} catch (Exception e) {
 			e.printStackTrace();
