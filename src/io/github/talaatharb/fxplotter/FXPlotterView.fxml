@@ -7,15 +7,6 @@
 <AnchorPane prefHeight="600.0" prefWidth="800.0"
 	xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1"
 	fx:controller="io.github.talaatharb.fxplotter.FXPlotterController">
-	<fx:define>
-		<fx:include fx:id="plotter2DView" source="plotter2d/Plotter2DView.fxml" />
-	</fx:define>
-	<fx:define>
-		<fx:include fx:id="plotter3DView" source="plotter3d/Plotter3DView.fxml" />
-	</fx:define>
-	<fx:define>
-		<fx:include fx:id="helpView" source="help/HelpView.fxml" />
-	</fx:define>
 	<children>
 		<TabPane prefHeight="600.0" prefWidth="800.0" side="LEFT"
 			tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0"
@@ -24,20 +15,38 @@
 			<tabs>
 				<Tab text="Plotter 2D">
 					<content>
-						<AnchorPane fx:id="plotter2DPane" minHeight="0.0"
-							minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+							prefWidth="200.0">
+							<children>
+								<fx:include source="plotter2d/Plotter2DView.fxml"
+									AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0"
+									AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+							</children>
+						</AnchorPane>
 					</content>
 				</Tab>
 				<Tab text="Plotter 3D">
 					<content>
-						<AnchorPane fx:id="plotter3DPane" minHeight="0.0"
-							minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+							prefWidth="200.0">
+							<children>
+								<fx:include source="plotter3d/Plotter3DView.fxml"
+									AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0"
+									AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+							</children>
+						</AnchorPane>
 					</content>
 				</Tab>
 				<Tab text="Help">
 					<content>
-						<AnchorPane fx:id="helpPane" minHeight="0.0" minWidth="0.0"
-							prefHeight="180.0" prefWidth="200.0" />
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+							prefWidth="200.0">
+							<children>
+								<fx:include source="help/HelpView.fxml"
+									AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0"
+									AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+							</children>
+						</AnchorPane>
 					</content>
 				</Tab>
 			</tabs>
