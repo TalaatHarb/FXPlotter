@@ -4,6 +4,9 @@ import java.util.HashMap;
 
 public interface ParamterizedExpression {
 	
+	public final static String RESULT_VARIABLE = "result";
+	public final static String VARIABLE1_NAME = "x";
+	public final static String VARIABLE2_NAME = "y";
 	public final static String PARAMETER1_NAME = "a";
 	
 	/**

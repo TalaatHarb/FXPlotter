@@ -5,7 +5,7 @@ import java.util.Map;
 
 public abstract class AbstractParameterizedExpression implements ParamterizedExpression {
 
-	protected String expression = ScriptedExpression.VARIABLE1_NAME;
+	protected String expression = VARIABLE1_NAME;
 	protected final Map<String, Double> parameters = new HashMap<String, Double>();
 
 	@Override
