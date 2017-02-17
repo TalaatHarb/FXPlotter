@@ -23,7 +23,7 @@
 						</AnchorPane>
 						<AnchorPane>
 							<children>
-								<TextField fx:id="functionText" alignment="CENTER" onAction="#functionChanged" text="sin(a*x) / x" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+								<TextField fx:id="functionText" alignment="CENTER" onAction="#functionChanged" text="sin(a*x) / (a * x)" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
 							</children>
 						</AnchorPane>
 						<AnchorPane>
