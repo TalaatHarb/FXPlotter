@@ -1,6 +1,6 @@
 package io.github.talaatharb.fxplotter.plotter2d;
 
-import io.github.talaatharb.function.ParameterizedFunction;
+import io.github.talaatharb.function.ParamterizedExpression;
 import javafx.fxml.FXML;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
@@ -40,7 +40,7 @@ public class Plotter2DController {
 	@FXML
 	private void functionChanged() {
 		model.setFunction(functionText.getText());
-		model.getFunction().setParameter(ParameterizedFunction.PARAMETER1_NAME, aSlider.getValue());
+		model.getFunction().setParameter(ParamterizedExpression.PARAMETER1_NAME, aSlider.getValue());
 		model.setResolution(Integer.parseInt(resolutionText.getText()));
 		replot();
 	}
@@ -48,15 +48,15 @@ public class Plotter2DController {
 	@FXML
 	private void initialize() {
 		aSlider.valueProperty().addListener((value, oldValue, newValue) -> parametersChanged());
-		data = new Series<Number, Number>();
-		data.getData().add(new XYChart.Data<Number, Number>(0, 0));
+		data = new Series<>();
+		data.getData().add(new XYChart.Data<>(0, 0));
 		lineChart.getData().add(data);
 		parametersChanged();
 	}
 
 	private void parametersChanged() {
 		double a = aSlider.getValue();
-		String parameterName = ParameterizedFunction.PARAMETER1_NAME;
+		String parameterName = ParamterizedExpression.PARAMETER1_NAME;
 		aLabel.setText(parameterName + " = " + String.format("%1.2f", a));
 		model.getFunction().setParameter(parameterName, a);
 		replot();

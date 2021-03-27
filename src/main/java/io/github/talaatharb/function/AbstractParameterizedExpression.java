@@ -6,7 +6,7 @@ import java.util.Map;
 public abstract class AbstractParameterizedExpression implements ParamterizedExpression {
 
 	protected String expression = VARIABLE1_NAME;
-	protected final Map<String, Double> parameters = new HashMap<String, Double>();
+	protected final Map<String, Double> parameters = new HashMap<>();
 
 	@Override
 	public String getExpression() {
@@ -19,7 +19,7 @@ public abstract class AbstractParameterizedExpression implements ParamterizedExp
 	}
 
 	@Override
-	public void setParameters(HashMap<String, Double> parameters) {
+	public void setParameters(Map<String, Double> parameters) {
 		this.parameters.putAll(parameters);
 	}
 

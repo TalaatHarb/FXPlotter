@@ -85,6 +85,7 @@ public class Xform extends Group {
 			break;
 		case XYZ:
 			getTransforms().addAll(t, p, rz, ry, rx, s, ip);
+			break;
 		default:
 			break;
 		}

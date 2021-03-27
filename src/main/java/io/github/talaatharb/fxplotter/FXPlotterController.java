@@ -6,6 +6,6 @@ public class FXPlotterController {
 
 	@FXML
 	private void initialize() {
-
+		// No initialization code
 	}
 }

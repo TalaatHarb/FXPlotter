@@ -1,0 +1,99 @@
+*{
+   background-color-1: #1B1C4D;
+   background-color-2: #fafacf;
+   writing-color-1: #f5f5f5;
+   writing-color-2: #0a0a0a;
+   borders-color-1: #5d5d5d;
+   charting-color-1: #ff0000;
+}
+
+.root{
+	-fx-background-color: background-color-1;
+	-fx-text-fill: writing-color-1;
+	-fx-font-size: 14.0px;
+}
+
+.label{
+	-fx-text-fill: writing-color-1;
+}
+
+.text-field{
+	-fx-background-color: background-color-2;
+	-fx-text-fill: writing-color-2;
+}
+
+.context-menu{
+	-fx-background-color: background-color-2;
+	-fx-border-color: borders-color-1;
+	-fx-border-radius: 2.0px;
+	-fx-border-width: 2.0px;
+	-fx-border-insets: 1.0px;
+}
+
+.context-menu .label{
+	-fx-text-fill: writing-color-2;
+}
+
+.chart-series-line {
+    -fx-stroke: charting-color-1;
+    -fx-stroke-width: 1.0px;
+    -fx-cursor: crosshair;
+}
+
+.chart-line-symbol{
+	-fx-cursor: crosshair;
+}
+
+.chart-vertical-grid-lines{
+	-fx-cursor: crosshair;
+}
+
+.chart-horizontal-grid-lines{
+	-fx-cursor: crosshair;
+}
+
+.chart-vertical-zero-line{
+	-fx-cursor: crosshair;
+}
+
+.chart-horizontal-zero-line{
+	-fx-cursor: crosshair;
+}
+
+.chart .chart-plot-background{
+	-fx-background-color: background-color-2;
+	-fx-cursor: crosshair;
+}
+
+.axis{
+	-fx-tick-label-fill: writing-color-1;
+}
+
+.choice-box{
+	-fx-background-color: background-color-1;
+	-fx-border-color: borders-color-1;
+}
+
+.choice-box .label{
+	-fx-text-fill: writing-color-1;
+}
+
+.choice-box .arrow{
+	-fx-background-color: background-color-2;
+}
+
+.choice-box .context-menu{
+	-fx-background-color: background-color-1;
+	
+}
+
+.check-box{
+	-fx-text-fill: writing-color-1;
+}
+
+#tools{
+	-fx-border-color: borders-color-1;
+	-fx-border-radius: 2.0px;
+	-fx-border-width: 2.0px;
+	-fx-border-insets: 1.0px;
+}

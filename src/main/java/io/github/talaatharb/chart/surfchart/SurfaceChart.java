@@ -45,7 +45,7 @@ public class SurfaceChart extends AnchorPane {
 
 	public SurfaceChart() {
 		super();
-		this.data = new ArrayList<MeshView>();
+		this.data = new ArrayList<>();
 
 		rootPanel = new Group();
 		rootPanel.getChildren().add(world);

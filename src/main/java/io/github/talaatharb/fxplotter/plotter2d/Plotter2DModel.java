@@ -14,9 +14,9 @@ public class Plotter2DModel {
 	public static final double DEFAULT_MIN_X = -Math.PI;
 	public static final int DEFAULT_RESOLUTION = 128;
 
-	private final static Plotter2DModel MODEL = new Plotter2DModel();
+	private static final Plotter2DModel MODEL = new Plotter2DModel();
 
-	public synchronized final static Plotter2DModel getModel() {
+	public synchronized static final Plotter2DModel getModel() {
 		return MODEL;
 	}
 
@@ -47,7 +47,7 @@ public class Plotter2DModel {
 		double y = 0;
 		for (int i = 0; i <= res; i++) {
 			y = function.applyAsDouble(x);
-			data.getData().add(new XYChart.Data<Number, Number>(x, y));
+			data.getData().add(new XYChart.Data<>(x, y));
 			x += dx;
 		}
 	}

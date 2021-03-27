@@ -7,9 +7,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class FXPlotter extends Application {
-	private static final String CSS_FILE = "/io/github/talaatharb/fxplotter/theme.css";
+	private static final String CSS_FILE = "theme.css";
 	private static final int HEIGHT = 600;
-	private static final String MAIN_FXML = "/io/github/talaatharb/fxplotter/FXPlotterView.fxml";
+	private static final String MAIN_FXML = "FXPlotterView.fxml";
 	private static final String TITILE = "FX Plotter";
 	private static final int WIDTH = 800;
 
