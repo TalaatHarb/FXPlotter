@@ -17,7 +17,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.PhongMaterial;
 import javafx.scene.shape.Box;
 import javafx.scene.shape.MeshView;
-import javafx.scene.shape.Shape3D;
 
 public class SurfaceChart extends AnchorPane {
 
@@ -36,10 +35,10 @@ public class SurfaceChart extends AnchorPane {
 	private final Xform cameraXform2 = new Xform();
 	private final Xform cameraXform3 = new Xform();
 	private List<MeshView> data;
-	private InputHandler inputHandler;
-	private Xform modelGroup = new Xform();
+//	private InputHandler inputHandler;
+//	private Xform modelGroup = new Xform();
 	private Group rootPanel;
-	private Shape3D chart;
+//	private Shape3D chart;
 	private SubScene scene;
 	private final Xform world = new Xform();
 
@@ -54,7 +53,7 @@ public class SurfaceChart extends AnchorPane {
 		buildAxes();
 		scene = new SubScene(rootPanel, DEFAULT_WIDTH, DEFAULT_HEIGHT, true, SceneAntialiasing.BALANCED);
 		world.setDepthTest(DepthTest.ENABLE);
-		inputHandler = new InputHandler(scene, world, camera, cameraXform1, cameraXform2);
+//		inputHandler = new InputHandler(scene, world, camera, cameraXform1, cameraXform2);
 		scene.setCamera(camera);
 		this.getChildren().add(scene);
 		GUIUtils.setAnchorZeroOffset(scene);
